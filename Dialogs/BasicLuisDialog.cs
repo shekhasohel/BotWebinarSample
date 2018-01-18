@@ -34,6 +34,14 @@ namespace Microsoft.Bot.Sample.LuisBot
             context.Wait(MessageReceived);
         }
 
+        [LuisIntent("Weather.GetCondition")]
+        public async Task GreetingIntent(IDialogContext context, LuisResult result)
+        {
+            // call service
+            await context.PostAsync("Weather today is 45C");
+            context.Wait(MessageReceived);
+        }
+
         [LuisIntent("Cancel")]
         public async Task CancelIntent(IDialogContext context, LuisResult result)
         {
