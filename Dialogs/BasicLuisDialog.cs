@@ -35,7 +35,7 @@ namespace Microsoft.Bot.Sample.LuisBot
         }
 
         [LuisIntent("Weather.GetCondition")]
-        public async Task GreetingIntent(IDialogContext context, LuisResult result)
+        public async Task WeatherIntent(IDialogContext context, LuisResult result)
         {
             // call service
             await context.PostAsync("Weather today is 45C");
